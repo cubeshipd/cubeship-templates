@@ -12,10 +12,10 @@ jobs:
         with:
           repository: cubeshipd/cubeship
           ref: master
-          path: cubeship
+          path: _cubeship
       - uses: actions/setup-go@v5
         with:
-          go-version-file: cubeship/product/go.mod
-          cache-dependency-path: cubeship/product/go.sum
+          go-version-file: _cubeship/product/go.mod
+          cache-dependency-path: _cubeship/product/go.sum
       - run: go run ./tools/templatecheck ../..
-        working-directory: cubeship/product
+        working-directory: _cubeship/product
