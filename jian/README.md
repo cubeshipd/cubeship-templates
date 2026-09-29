@@ -10,7 +10,7 @@ on a domain and everything it keeps in a managed PostgreSQL.
 
 ## What it creates
 
-- **jian** — Jian `2.1.0`, from `ghcr.io/lucasaarch/jian-gateway`. The API
+- **jian** — Jian `0.1.0`, from `ghcr.io/lucasaarch/jian-gateway`. The API
   answers on the domain you choose, and the panel under `/ui/` on the same
   domain. A volume at `/home/node` keeps the agents' workbench; everything
   else lives in the database, so a redeploy loses nothing.
@@ -110,7 +110,7 @@ link-local addresses stay blocked whatever it says.
 
 The Jian version is the image `tag` in `template.yaml`. Jian migrates its
 database on start and a migration does not undo itself: back the database up
-before moving to a newer release of this template. Going back to an older
+before changing the installed app to a newer image. Going back to an older
 image does not go back on the schema.
 
 After updating, check each server under **MCP**. It can use a header, a local
