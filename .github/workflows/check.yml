@@ -1,0 +1,21 @@
+name: Check templates
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: cubeshipd/cubeship
+          ref: master
+          path: cubeship
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: cubeship/product/go.mod
+          cache-dependency-path: cubeship/product/go.sum
+      - run: go run ./tools/templatecheck ../..
+        working-directory: cubeship/product
