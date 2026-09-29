@@ -41,7 +41,7 @@ It accepts any username and password, or none, over plain SMTP without TLS.
 This is a test inbox, not an internet-facing mail relay; do not publish the
 port to an untrusted network.
 Give an app that host, port `1025`, and turn TLS off. For a
-[Ghost](https://github.com/cubeshipd/cubeship-ghost-template) app, for
+[Ghost](https://github.com/cubeshipd/cubeship-templates/tree/main/ghost) app, for
 example:
 
 ```yaml

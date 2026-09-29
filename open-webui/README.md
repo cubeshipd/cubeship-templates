@@ -28,7 +28,7 @@ one volume and one backup.
 | --- | --- |
 | Where Open WebUI answers | A domain you control, pointed at your instance. |
 | The key sessions are signed with | Nothing — the instance generates it and shows it once. |
-| Your Ollama server | The Ollama app's internal address. Pre-filled with the [Ollama template](https://github.com/cubeshipd/cubeship-ollama-template)'s, with its suggested names. Leave it empty if you have no Ollama. |
+| Your Ollama server | The Ollama app's internal address. Pre-filled with the [Ollama template](https://github.com/cubeshipd/cubeship-templates/tree/main/ollama)'s, with its suggested names. Leave it empty if you have no Ollama. |
 
 An address that does not answer breaks nothing: Open WebUI logs a connection
 error and lists no Ollama models.
@@ -49,7 +49,7 @@ variables changes nothing — change them in *Admin Settings* instead.
 
 ## With Ollama and LiteLLM
 
-- **[Ollama](https://github.com/cubeshipd/cubeship-ollama-template)** runs
+- **[Ollama](https://github.com/cubeshipd/cubeship-templates/tree/main/ollama)** runs
   models on this instance, with no domain and no authentication of its own.
   Open WebUI is the sign-in in front of it: install Ollama first, keep the
   pre-filled address, and pull models from *Admin Settings → Connections →

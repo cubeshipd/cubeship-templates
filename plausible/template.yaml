@@ -57,8 +57,8 @@ apps:
     name: clickhouse
     # The published image runs with its stock configuration; the Dockerfile
     # adds the files Plausible's compose file mounts.
-    repo: https://github.com/cubeshipd/cubeship-plausible-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:plausible
     build: dockerfile
     dockerfile: clickhouse/Dockerfile
     port: 8123
@@ -77,8 +77,8 @@ apps:
     name: plausible
     # The published image starts without creating or migrating its
     # databases; the Dockerfile runs both first, as upstream's compose does.
-    repo: https://github.com/cubeshipd/cubeship-plausible-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:plausible
     build: dockerfile
     dockerfile: plausible/Dockerfile
     port: 8000

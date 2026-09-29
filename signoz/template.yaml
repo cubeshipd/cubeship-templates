@@ -45,8 +45,8 @@ apps:
   # its schema before it starts.
   - key: clickhouse
     name: clickhouse
-    repo: https://github.com/cubeshipd/cubeship-signoz-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:signoz
     build: dockerfile
     dockerfile: clickhouse/Dockerfile
     port: 8123
@@ -60,8 +60,8 @@ apps:
 
   - key: collector
     name: collector
-    repo: https://github.com/cubeshipd/cubeship-signoz-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:signoz
     build: dockerfile
     dockerfile: collector/Dockerfile
     port: 4318

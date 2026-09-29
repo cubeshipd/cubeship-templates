@@ -21,8 +21,8 @@ apps:
     # The published image writes its API key into the page it serves, so
     # anyone who opens the domain is signed in. The Dockerfile in this
     # repository is that image asking for the key instead.
-    repo: https://github.com/cubeshipd/cubeship-openhands-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:openhands
     build: dockerfile
     port: 8000
     # The agent server's own check, and the one route that asks for no key.

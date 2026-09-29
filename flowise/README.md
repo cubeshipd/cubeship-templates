@@ -68,12 +68,12 @@ Without `--email` and `--password`, the command lists the accounts.
 Apps on the same instance reach each other at their internal addresses,
 without going through a domain. With the suggested names:
 
-- **[Ollama](https://github.com/cubeshipd/cubeship-ollama-template)** — in the
+- **[Ollama](https://github.com/cubeshipd/cubeship-templates/tree/main/ollama)** — in the
   *Ollama* chat model and *Ollama Embedding* nodes, set *Base URL* to
   `http://cubeship-ollama-production-ollama:11434`, and the model name to one
   you have pulled. Ollama has no authentication; nothing outside the instance
   can reach it.
-- **[LiteLLM](https://github.com/cubeshipd/cubeship-litellm-template)** — use
+- **[LiteLLM](https://github.com/cubeshipd/cubeship-templates/tree/main/litellm)** — use
   the *OpenAI Custom Model* chat model node (or *OpenAI*) with an OpenAI
   credential holding a LiteLLM virtual key, and under *Additional Parameters*
   set *Base Path* to `http://cubeship-litellm-production-litellm:4000/v1`. The

@@ -4,7 +4,7 @@
 for AI agents. It stores conversations, extracts observations and builds context
 that agents can retrieve across sessions.
 
-This template installs Honcho **v3.1.2** with authenticated HTTPS access, a
+This template installs Honcho **v3.2.1** with authenticated HTTPS access, a
 background worker, a managed PostgreSQL with pgvector, and Redis. It can provide shared
 memory to a Hermes on your VPS and another Hermes on your Mac.
 
@@ -43,7 +43,7 @@ Self-hosting stores Honcho's data on your instance. Its default memory processin
 still sends content to OpenAI and incurs model usage charges. Other providers
 and OpenAI-compatible endpoints can be configured using Honcho's per-feature
 model settings on **both** the API and worker; see the
-[upstream configuration](https://github.com/plastic-labs/honcho/blob/v3.1.2/.env.template).
+[upstream configuration](https://github.com/plastic-labs/honcho/blob/v3.2.1/.env.template).
 
 ## Create an access token
 
@@ -127,15 +127,14 @@ It is a managed database created with `pgvector`, so it is dumped, scheduled and
 restored from its own page like any other. Redis is a cache, not the source of
 truth for memories.
 
-Earlier releases of this template ran PostgreSQL as an app with a volume.
+Older installations of this template ran PostgreSQL as an app with a volume.
 **An existing installation is not migrated**: its `postgres` app and volume stay
 where they are, and moving to the managed database means installing fresh and
 copying the data across with `pg_dump` and `psql`.
 
-A database's extensions are chosen when it is created. A later release of this
-template asking for a different one would not change a database that already
-exists — Cubeship says so in the update preview, and an extension can be
-installed from the database's own page.
+A database's extensions are chosen when it is created. Changing this template
+does not change a database that already exists. Install an extension from the
+database's own page.
 
 Keep the API at one replica. Before upgrading Honcho, back up the database and
 stop the deriver; update the API and let its migrations finish,
@@ -148,23 +147,16 @@ database deletes the memory stored in it.
 
 ## Template maintenance
 
-The Dockerfile pins upstream Honcho `v3.1.2` to its published image digest. The
-manifest's API and deriver both build this template repository at `v2.0.0`.
-For a new release, update both `ref` values to the tag being published.
+The Dockerfile pins upstream Honcho `v3.2.1` to its published image digest. The
+manifest's API and deriver both build this directory at the cataloged commit.
 
 Run `python3 -m unittest discover -s tests -v` for the startup checks. Validate
 `template.yaml` using Cubeship's `product/template.Validate` before publishing.
 The validator's no-health and unreachable-app warnings for the deriver are
 expected: it serves no HTTP health route and consumes work rather than
 receiving requests.
-The catalog requires this manifest, this README and `icon.png` in a public
-repository named `cubeship-honcho-template`, with topic `cubeship-template` and
-a GitHub release. The catalog indexes published releases automatically; see
-[this template's releases](https://github.com/cubeshipd/cubeship-honcho-template/releases).
-
-Honcho v3.1.2's bundled token generator writes an ISO timestamp for `--expires`,
-but its JWT verifier expects a numeric expiry. The setup command above omits
-that option so the generated token works with this pinned version.
+The catalog reads this directory from `cubeshipd/cubeship-templates` and keeps
+the previous valid snapshot if a commit fails validation.
 
 The icon is rendered from Honcho's
 [official favicon](https://github.com/plastic-labs/honcho/blob/v3.1.2/docs/favicon.svg).

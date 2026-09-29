@@ -56,8 +56,8 @@ apps:
     # and would not be the database Cubeship backs up. The Dockerfile in
     # this repository is that image creating this one on first start, with
     # the manager off and proxy mode on.
-    repo: https://github.com/cubeshipd/cubeship-odoo-template
-    ref: v1.0.1
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:odoo
     build: dockerfile
     # Threaded mode: the websocket is on this port too. With workers it
     # moves to 8072, and a domain reaches one port.

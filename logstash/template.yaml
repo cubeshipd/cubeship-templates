@@ -45,8 +45,8 @@ apps:
     name: logstash
     # The published image's pipeline reads Beats and prints to stdout. The
     # Dockerfile in this repository is that image with logstash.conf instead.
-    repo: https://github.com/cubeshipd/cubeship-logstash-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:logstash
     build: dockerfile
     # The http input. Beats listens on 5044, for apps on the instance only.
     port: 8080

@@ -20,8 +20,8 @@ apps:
     # The published image listens on loopback only and will not start on an
     # empty volume. The Dockerfile in this repository is that image with a
     # start script that configures it for the domain first.
-    repo: https://github.com/cubeshipd/cubeship-openclaw-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:openclaw
     build: dockerfile
     # The gateway: the Control UI and its WebSocket on one port.
     port: 18789

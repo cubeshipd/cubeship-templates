@@ -30,8 +30,8 @@ apps:
     name: inngest
     # The published image prints its help and exits when given no command.
     # The Dockerfile in this repository is that image running `inngest start`.
-    repo: https://github.com/cubeshipd/cubeship-inngest-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:inngest
     build: dockerfile
     port: 8288
     health: /health

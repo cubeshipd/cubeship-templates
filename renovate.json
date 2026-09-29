@@ -8,12 +8,18 @@
       "matchStrings": ["image:[ \\t]+(?<depName>[^\\s#]+)[\\s\\S]*?tag:[ \\t]+[\"']?(?<currentValue>[^\\s\"'#]+)"],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchFileNames": ["plausible/clickhouse/Dockerfile"],
+      "matchPackageNames": ["clickhouse/clickhouse-server"],
+      "allowedVersions": "<25.0.0"
     },
     {
-      "customType": "regex",
-      "managerFilePatterns": ["/^[a-z0-9-]+\\/template\\.yaml$/"],
-      "matchStrings": ["repo:[ \\t]+https://github\\.com/(?<depName>[^\\s#]+)[\\s\\S]*?ref:[ \\t]+[\"']?(?<currentValue>[^\\s\"'#]+)"],
-      "datasourceTemplate": "github-tags"
+      "matchFileNames": ["signoz/clickhouse/Dockerfile"],
+      "matchPackageNames": ["clickhouse/clickhouse-server"],
+      "allowedVersions": "<26.0.0"
     }
   ]
 }

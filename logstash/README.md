@@ -7,7 +7,7 @@ them to Elasticsearch.
 This template installs one Logstash on a Cubeship instance, taking events over
 HTTP on a domain and over Beats on a TCP port, and writing them to Elasticsearch.
 It pairs with the
-[Elasticsearch template](https://github.com/cubeshipd/cubeship-elasticsearch-template).
+[Elasticsearch template](https://github.com/cubeshipd/cubeship-templates/tree/main/elasticsearch).
 
 ## What it creates
 

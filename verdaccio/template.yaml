@@ -26,8 +26,8 @@ apps:
     # Dockerfile in this repository is that image with config.yaml, which
     # closes registration and requires signing in, and a start command that
     # creates the admin account.
-    repo: https://github.com/cubeshipd/cubeship-verdaccio-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:verdaccio
     build: dockerfile
     port: 4873
     health: /-/ping

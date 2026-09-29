@@ -25,7 +25,7 @@ Outline has no usernames or passwords. Everyone signs in through a provider,
 and a fresh instance without one shows a sign-in page with no way in. This
 template configures a generic **OpenID Connect** provider, which is required.
 
-[Cubeship's Keycloak template](https://github.com/cubeshipd/cubeship-keycloak-template)
+[Cubeship's Keycloak template](https://github.com/cubeshipd/cubeship-templates/tree/main/keycloak)
 works. In its admin console:
 
 1. Create a realm for your team, such as `outline`, and the users in it. Each

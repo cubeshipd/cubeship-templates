@@ -4,7 +4,7 @@ This repository is the source of the templates listed at [cubeship.dev/templates
 
 To add or change a template, open a pull request. CI validates every directory with Cubeship's current template validator. Once merged to `main`, the catalog reads the new commit within about five minutes. A broken commit leaves the previous catalog available.
 
-Renovate checks the image tags and GitHub source refs in every `template.yaml` and opens pull requests for updates. Managed database versions stay tied to the versions Cubeship supports.
+Renovate checks image tags in `template.yaml` and base images in each template's Dockerfiles, opening pull requests for updates. Source-built apps use this repository with `ref: main:<directory>`; the installer pins that ref to the cataloged commit. Managed database versions stay tied to the versions Cubeship supports.
 
 Installed templates stay as they were. Changing a file here does not update an existing installation; change its apps directly on that Cubeship instance.
 

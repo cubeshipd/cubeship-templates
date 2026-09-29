@@ -72,12 +72,12 @@ Choose the provider under *Settings → AI Providers → LLM*, or in the first
 setup. An app on the same instance is reachable at its internal address,
 without going through a domain.
 
-- **[Ollama](https://github.com/cubeshipd/cubeship-ollama-template)** runs
+- **[Ollama](https://github.com/cubeshipd/cubeship-templates/tree/main/ollama)** runs
   models on this instance. Choose *Ollama*, and set the base URL to
   `http://cubeship-ollama-production-ollama:11434` with the Ollama template's
   suggested names. Its models are listed once it answers. Ollama can be the
   embedder too, under *Settings → AI Providers → Embedder*.
-- **[LiteLLM](https://github.com/cubeshipd/cubeship-litellm-template)** puts
+- **[LiteLLM](https://github.com/cubeshipd/cubeship-templates/tree/main/litellm)** puts
   many providers behind one OpenAI-compatible API with its own keys and spend
   limits. Choose *LiteLLM*, set the base URL to
   `http://cubeship-litellm-production-litellm:4000/v1` with the LiteLLM

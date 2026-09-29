@@ -42,8 +42,8 @@ databases:
 apps:
   - key: api
     name: honcho
-    repo: https://github.com/cubeshipd/cubeship-honcho-template
-    ref: v2.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:honcho
     build: dockerfile
     port: 8000
     health: /health
@@ -64,8 +64,8 @@ apps:
 
   - key: deriver
     name: deriver
-    repo: https://github.com/cubeshipd/cubeship-honcho-template
-    ref: v2.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:honcho
     build: dockerfile
     # The deriver consumes the database queue; it serves no public HTTP API.
     limits: { cpu: 1, memory: 2Gi }

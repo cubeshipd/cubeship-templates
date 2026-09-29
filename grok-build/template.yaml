@@ -22,8 +22,8 @@ apps:
     name: grok
     # There is no published image. The Dockerfile in this repository downloads
     # a pinned Grok Build binary and runs `grok agent serve`.
-    repo: https://github.com/cubeshipd/cubeship-grok-build-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:grok-build
     build: dockerfile
     port: 2419
     # No health check: the server answers only an authenticated WebSocket

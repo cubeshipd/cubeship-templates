@@ -15,8 +15,8 @@ apps:
     # The published image runs a development server, in memory, when given no
     # command. The Dockerfile in this repository is that image running
     # `server` with the configuration in vault.hcl.
-    repo: https://github.com/cubeshipd/cubeship-vault-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:vault
     build: dockerfile
     port: 8200
     # Answers 200 sealed or not. /v1/sys/health answers 501 before init and

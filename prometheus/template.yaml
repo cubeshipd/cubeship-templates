@@ -12,8 +12,8 @@ apps:
     # The published image scrapes only itself, and its configuration is a
     # file. The Dockerfile in this repository is that image with the
     # prometheus.yml beside it.
-    repo: https://github.com/cubeshipd/cubeship-prometheus-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:prometheus
     build: dockerfile
     port: 9090
     health: /-/healthy

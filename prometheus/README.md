@@ -7,7 +7,7 @@ on.
 
 This template installs one Prometheus server on a Cubeship instance, reachable
 only by the apps on that instance, with its time series in a volume. It pairs
-with the [Grafana template](https://github.com/cubeshipd/cubeship-grafana-template).
+with the [Grafana template](https://github.com/cubeshipd/cubeship-templates/tree/main/grafana).
 
 ## What it creates
 

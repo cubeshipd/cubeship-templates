@@ -38,8 +38,8 @@ apps:
     # The published image runs Apache alone, and background jobs need cron.
     # The Dockerfile in this repository is that image running Apache and cron
     # under supervisord.
-    repo: https://github.com/cubeshipd/cubeship-nextcloud-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:nextcloud
     build: dockerfile
     port: 80
     # A file Apache serves without Nextcloud. status.php and every page answer

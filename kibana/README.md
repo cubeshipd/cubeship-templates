@@ -6,7 +6,7 @@ a browser.
 
 This template installs Kibana on a Cubeship instance and connects it to an
 Elasticsearch you already run — made for the
-[Elasticsearch template](https://github.com/cubeshipd/cubeship-elasticsearch-template).
+[Elasticsearch template](https://github.com/cubeshipd/cubeship-templates/tree/main/elasticsearch).
 
 ## What it creates
 

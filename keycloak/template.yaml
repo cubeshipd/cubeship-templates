@@ -31,8 +31,8 @@ apps:
     # The published image's entrypoint, kc.sh, starts no server without a
     # command. The Dockerfile in this repository is Keycloak's optimized
     # container: built for Postgres, running `start --optimized`.
-    repo: https://github.com/cubeshipd/cubeship-keycloak-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:keycloak
     build: dockerfile
     port: 8080
     # /health/* is on the management port, 9000, not this one. The master

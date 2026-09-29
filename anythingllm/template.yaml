@@ -16,8 +16,8 @@ apps:
     # The published image keeps the settings made in its UI in a file outside
     # its storage directory, so every deploy would forget them. The Dockerfile
     # in this repository is that image with the file moved into the volume.
-    repo: https://github.com/cubeshipd/cubeship-anythingllm-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:anythingllm
     build: dockerfile
     port: 3001
     health: /api/ping

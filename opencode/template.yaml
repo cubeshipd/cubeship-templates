@@ -18,8 +18,8 @@ apps:
     name: opencode
     # The published image starts the terminal UI when given no command. The
     # Dockerfile in this repository is that image running `serve`, with git.
-    repo: https://github.com/cubeshipd/cubeship-opencode-template
-    ref: v1.0.0
+    repo: https://github.com/cubeshipd/cubeship-templates
+    ref: main:opencode
     build: dockerfile
     port: 4096
     # Every other route asks for the password once one is set; the web app's
