@@ -13,7 +13,7 @@ jobs:
           repository: cubeshipd/cubeship
           ref: master
           path: _cubeship
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with:
           go-version-file: _cubeship/product/go.mod
           cache-dependency-path: _cubeship/product/go.sum
