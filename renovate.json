@@ -1,25 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": ["/^[a-z0-9-]+\\/template\\.yaml$/"],
-      "matchStrings": ["image:[ \\t]+(?<depName>[^\\s#]+)[\\s\\S]*?tag:[ \\t]+[\"']?(?<currentValue>[^\\s\"'#]+)"],
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "docker"
-    }
-  ],
-  "packageRules": [
-    {
-      "matchFileNames": ["plausible/clickhouse/Dockerfile"],
-      "matchPackageNames": ["clickhouse/clickhouse-server"],
-      "allowedVersions": "<25.0.0"
-    },
-    {
-      "matchFileNames": ["signoz/clickhouse/Dockerfile"],
-      "matchPackageNames": ["clickhouse/clickhouse-server"],
-      "allowedVersions": "<26.0.0"
-    }
-  ]
+  "enabled": false
 }
